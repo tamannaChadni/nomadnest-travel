@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap");
+/* common style */
 
 .container {
   font-family: "Mulish", sans-serif;
@@ -6,6 +7,26 @@
   margin: 0 auto;
   margin-bottom: 40px;
 }
+.btn-primary {
+  border-radius: 8px;
+  background: #ff5400;
+  color: white;
+  width: 174px;
+  height: 40px;
+  outline: none;
+}
+.title {
+  color: #131318;
+  font-size: 40px;
+  font-weight: 800;
+}
+.text {
+  color: rgba(19, 19, 24, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+}
+/* common style */
+/* navbar start */
 .w-100 {
   height: 100%;
   width: 100%;
@@ -22,23 +43,13 @@
   background: #ff5400;
   color: white;
 }
-.btn-primary {
-  border-radius: 8px;
-  background: #ff5400;
-  color: white;
-  width: 174px;
-  height: 40px;
-  outline: none;
-}
 
-.popular-tour {
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-}
 .logo {
   display: flex;
   gap: 5px;
+}
+.hamburger {
+  display: none !important;
 }
 .nav nav {
   display: flex;
@@ -50,6 +61,8 @@
   padding-right: 20px;
   color: #424247;
 }
+/* navbar end */
+/* banner start */
 .banner-title,
 .banner-description {
   color: wheat;
@@ -67,16 +80,7 @@
   max-width: 100%;
   margin: 0 auto;
 }
-.title {
-  color: #131318;
-  font-size: 40px;
-  font-weight: 800;
-}
-.text {
-  color: rgba(19, 19, 24, 0.7);
-  font-size: 16px;
-  font-weight: 400;
-}
+
 .banner {
   text-align: center;
   background-image: url("../images/Group-2.png"),
@@ -104,6 +108,15 @@
   text-align: center;
   flex: 0 0 20%;
 }
+/* banner end */
+/* popular tour section start */
+.popular-tour {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+/* popular section end */
+/* destination section start */
 
 .destination-img {
   position: relative;
@@ -167,6 +180,8 @@
 .choosing-agency-title {
   margin-bottom: 24px;
 }
+/* destination section end */
+/* footer start */
 .footer {
   background: rgba(19, 19, 24, 0.05);
   text-align: center;
@@ -184,6 +199,8 @@
   margin-top: 10px;
   margin-right: 10px;
 }
+/* footer end */
+/* choosing agency section start */
 .choosing-agency-box {
   padding-left: 32px;
 }
@@ -215,6 +232,9 @@
   margin: 0 auto;
   padding-left: 20px;
 }
+/* choosing agency section end */
+
+/* newsletter start */
 .newsletter {
   display: flex;
   justify-content: space-around;
@@ -263,22 +283,77 @@ hr {
   right: 40px;
   transform: rotate(-19.628deg);
 }
-.tour-package-details img{
+/* newsletter end */
+/* bonus section tour-package */
+.tour-package-details img {
   width: 30%;
   height: 100%;
   object-fit: cover;
 }
-.tour-package-details{
+.tour-package-details {
   display: flex;
   gap: 40px;
   border-radius: 16px;
   border: 1px solid rgba(251, 181, 99, 0.2);
   background: rgba(251, 181, 99, 0.05);
   margin-bottom: 20px;
-  
-  
-
 }
-.tour-package-content h2{
+.tour-package-content h2 {
   text-align: center;
+}
+/* tour package */
+
+/* responsive view */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .popular-tour-img img,
+  .newsletter-img img {
+    max-width: 100%;
+  }
+  .hamburger {
+    display: inline-block !important;
+  }
+  .navbar {
+    display: none;
+  }
+  .banner-drop-section,
+  .popular-tour,
+  .newsletter {
+    flex-direction: column;
+  }
+  .choose-destination {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(1, 1fr); */
+  }
+  .destination-img img {
+    height: 250px;
+  }
+  
+ .tour-package-details img{
+  height: inherit;
+ }
+ .two-boxs{
+  
+  flex-direction: column;
+ }
+ .banner-drop-section{
+  margin-top: 20px;
+  padding: 0 auto;
+  
+ }
+ .w-100 {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  text-align: center;
+  color: rgba(19, 19, 24, 0.5);
+  margin-bottom: 5px;
+}
+
 }
